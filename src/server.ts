@@ -9,7 +9,6 @@ const app: FastifyInstance = fastify();
 app.addHook('onRequest', authenticateToken);
 const productController = new ProductController();
 const userController = new UserController();
-// console.log(productRepository.getAll());
 ProductRoutes(app, productController);
 userRoutes(app, userController);
 
